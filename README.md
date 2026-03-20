@@ -2,6 +2,8 @@
 
 An AI-powered language tutor built with a plain HTML/CSS/JS frontend and a Vercel serverless function as a secure API proxy.
 
+#URL : https://language-tutor-beryl.vercel.app/
+
 ## Features
 
 - **6 languages**: English, Spanish, French, German, Japanese, Italian
@@ -59,40 +61,6 @@ language_tutor/
 
 ## Deployment to Vercel
 
-### 1. Push to GitHub
-
-Make sure `.env` is in `.gitignore` (it is by default in this project). Then push your code:
-
-```bash
-git init
-git add .
-git commit -m "Initial commit"
-git remote add origin https://github.com/your-username/language-tutor.git
-git push -u origin main
-```
-
-### 2. Import to Vercel
-
-1. Go to [vercel.com](https://vercel.com) and sign in.
-2. Click **Add New Project** → import your GitHub repository.
-3. Vercel auto-detects the `api/` directory. No additional build configuration needed.
-
-### 3. Set the API Key Environment Variable
-
-**This is the most important step.** Your API key must be set in Vercel's dashboard — never commit it to git.
-
-1. In your Vercel project dashboard, go to **Settings → Environment Variables**.
-2. Add a new variable:
-   - **Name**: `ANTHROPIC_API_KEY`
-   - **Value**: your Anthropic API key (starts with `sk-ant-`)
-   - **Environment**: Production (and Preview if you want)
-3. Click **Save**.
-4. **Redeploy** your project for the variable to take effect:
-   - Go to the **Deployments** tab → click the three dots on the latest deployment → **Redeploy**.
-
-### 4. Done
-
-Your app is live at the URL Vercel provides (e.g., `https://language-tutor-abc123.vercel.app`).
 
 ## How It Works
 
