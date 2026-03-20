@@ -5,10 +5,14 @@ import CorrectionsCard from './CorrectionsCard';
 import VocabularyCard from './VocabularyCard';
 import GrammarCard from './GrammarCard';
 import EncouragementCard from './EncouragementCard';
+import LessonTopicPicker from './LessonTopicPicker';
 
-export default function FeedbackPanel({ proficiency, stats, elapsedSeconds, feedback, language }) {
+export default function FeedbackPanel({ proficiency, stats, elapsedSeconds, feedback, language, mode, activeTopic, onTopicSelect }) {
   return (
     <div className="feedback-panel">
+      {mode === 'lesson' && (
+        <LessonTopicPicker activeTopic={activeTopic} onTopicSelect={onTopicSelect} />
+      )}
       <ProficiencyCard proficiency={proficiency} />
       <StatsCard
         elapsedSeconds={elapsedSeconds}

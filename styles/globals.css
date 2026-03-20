@@ -594,6 +594,42 @@ body { background: var(--bg); color: var(--text); line-height: 1.6; overflow: hi
   .language-select { font-size: 13px; }
 }
 
+/* ===== LESSON TOPIC PICKER ===== */
+.lesson-topics-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.topic-btn {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  padding: 5px 11px;
+  border-radius: var(--radius-full);
+  border: 1.5px solid var(--border);
+  background: var(--surface-2);
+  color: var(--text);
+  font-size: 12px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all .18s;
+  white-space: nowrap;
+  font-family: inherit;
+}
+
+.topic-btn:hover {
+  border-color: var(--primary);
+  background: var(--info-bg);
+  color: var(--primary);
+}
+
+.topic-btn.active {
+  border-color: var(--primary);
+  background: var(--primary);
+  color: white;
+}
+
 /* ===== NEW ITEM FLASH ===== */
 .flash-new {
   animation: flashNew .5s ease;

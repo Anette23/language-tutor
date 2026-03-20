@@ -18,6 +18,7 @@ export default function TutorApp() {
   const [feedback, setFeedback] = useState(EMPTY_FEEDBACK);
   const [stats, setStats] = useState(EMPTY_STATS());
   const [elapsedSeconds, setElapsedSeconds] = useState(0);
+  const [activeTopic, setActiveTopic] = useState(null);
 
   const sessionStartRef = useRef(Date.now());
   const timerRef = useRef(null);
@@ -47,7 +48,13 @@ export default function TutorApp() {
     setFeedback(EMPTY_FEEDBACK);
     setStats(EMPTY_STATS());
     setElapsedSeconds(0);
+    setActiveTopic(null);
     sessionStartRef.current = Date.now();
+  }
+
+  function handleTopicSelect(topic) {
+    setActiveTopic(topic);
+    handleSend(`Let's do a lesson on "${topic}". Please start with the basics and give me some exercises.`);
   }
 
   async function handleSend(text) {
@@ -141,6 +148,9 @@ export default function TutorApp() {
           elapsedSeconds={elapsedSeconds}
           feedback={feedback}
           language={language}
+          mode={mode}
+          activeTopic={activeTopic}
+          onTopicSelect={handleTopicSelect}
         />
       </main>
     </div>
