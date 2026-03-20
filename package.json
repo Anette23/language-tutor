@@ -1,11 +1,19 @@
 {
   "name": "language-tutor",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "Interactive AI-powered language learning tutor",
   "engines": {
     "node": ">=18"
   },
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start"
+  },
   "dependencies": {
-    "@anthropic-ai/sdk": "^0.55.0"
+    "@anthropic-ai/sdk": "^0.55.0",
+    "next": "14.2.29",
+    "react": "18.3.1",
+    "react-dom": "18.3.1"
   }
 }
