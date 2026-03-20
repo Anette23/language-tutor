@@ -1,0 +1,11 @@
+{
+  "name": "language-tutor",
+  "version": "1.0.0",
+  "description": "Interactive AI-powered language learning tutor",
+  "engines": {
+    "node": ">=18"
+  },
+  "dependencies": {
+    "@anthropic-ai/sdk": "^0.55.0"
+  }
+}
